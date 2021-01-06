@@ -73,5 +73,9 @@ def hello():
 
 cmd에서 venv를 activate 한 후, 
 ```bash
-FLASK_DEBUG=1 flask run
+$ FLASK_DEBUG=1 flask run
+ * Serving Flask app "hello"
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
+FLASK_DEBUG=1를 같이 써주면 수정하면서 바로 새로고침으로 반영된 것을 확인 할 수 있다.(서버 재시작할 필요 없음.)
+Hello World가 뜨는 걸 확인 할 수 있다.
