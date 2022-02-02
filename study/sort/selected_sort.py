@@ -15,4 +15,3 @@ for i in range(0, len(arr)):
     arr[i], arr[min_index] = arr[min_index], arr[i]
 
 print(arr)
-    
