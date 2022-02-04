@@ -4,18 +4,19 @@ array = list(map(int,input().split()))
 
 start = 0
 end = max(array)
-
 result = 0
-while (start <= end):
+while (start<=end):
     total = 0
-    mid = (start + end) // 2
+    mid = (start+end) // 2
+
     for x in array:
         if x > mid:
-            total+=x-mid
-    # 최소 떡의 길이를 채워야 하므로 다음 이진탐색으로 넘어감. 높이 후보가 될 수 없음.
-    if m > total:
+            total += x - mid 
+
+    # mid 기준으로 짜른 나머지 떡의 합이 m보다 작은 경우
+    if total < m:
         end = mid - 1
-    # 최소 떡이 길이를 세웠으므로 높이의 후보가 될 수 있음.
+    # mid 기준으로 짜른 나머지 떡의 합이 m보다 큰 경우
     else:
         result = mid
         start = mid + 1
